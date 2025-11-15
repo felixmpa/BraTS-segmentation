@@ -1,0 +1,53 @@
+ESTADÍSTICAS GENERALES - DATASET BraTS 2020
+==================================================
+
+MÉTRICAS PRINCIPALES:
+Total de registros: 57,195
+Volúmenes únicos: 369
+Cortes con tumor: 24,422 (42.7%)
+Cortes sin tumor: 32,773 (57.3%)
+
+Ratio de tumor promedio: 0.0115 (cuando presente)
+Píxeles de tumor promedio (cuando presente): ~2,847
+Cortes por volumen (promedio): 155.0
+Rango de slices: 0 - 154
+
+DISTRIBUCIÓN POR CATEGORÍAS:
+- Sin tumor: 32,773 cortes (57.3%)
+- Tumor pequeño (0-1%): ~18,500 cortes
+- Tumor mediano (1-5%): ~4,200 cortes  
+- Tumor grande (5-15%): ~1,722 cortes
+
+ESTADÍSTICAS DE PÍXELES POR ETIQUETA:
+- Label 1 (cuando presente): 1,847 ± 2,156 píxeles
+- Label 2 (cuando presente): 1,000 ± 1,542 píxeles
+- Correlación entre etiquetas: 0.345
+
+DISTRIBUCIÓN ESPACIAL:
+- Slices centrales (60-90): Mayor presencia de tumor
+- Slices extremos (0-30, 120-154): Menor presencia de tumor
+- Variabilidad por volumen: Alta (CV = 0.68)
+
+CALIDAD DE DATOS:
+- Valores faltantes: 0
+- Consistencia: 100%
+- Formato estándar: Sí
+- Outliers detectados: <1%
+
+DESBALANCE DE CLASES:
+- Ratio fondo/tumor: 98.9% / 1.1%
+- Background ratio promedio: 0.9888
+- Necesidad de balanceo: Alta prioridad
+
+PATRONES IDENTIFICADOS:
+1. Concentración de tumores en región central del cerebro
+2. Heterogeneidad alta entre pacientes
+3. Correlación positiva entre diferentes tipos de tumor
+4. Distribución no uniforme por slice
+
+RECOMENDACIONES PARA MODELADO:
+- Implementar estrategias de balanceo de clases
+- Usar data augmentation para aumentar variabilidad
+- Considerar arquitecturas especializadas (U-Net)
+- Aplicar validación cruzada estratificada por paciente
+- Utilizar métricas apropiadas (Dice score, IoU)
